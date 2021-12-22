@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+<body>
+   <!-- To Do List -->
+     <!-- To Do Form -->
+        <!-- Required Input: Text Field & Button -->
+        <!-- Bonus: Add Strikethrough to show completion -->
+        <h1>to_do_app</h1>
+    <ul id="to-do"></ul>
+    <form>
+        <label for='todo'>ToDo </label>
+        <input type="text" name="todo" id="todo">
+        <button type='submit'id='todo-btn'>submit </button>
+
+   
+    </form>
+    <script> 
+    const todolist = document.getElementById('to-do')
+    const todo= document.getElementById('todo')
+    const button = document.getElementById('todo-btn')     
+
+        
+        
+
+      </script>
+
+
+        <!-- function addtodo(e){
+            e.preventDefault()
+            // console.log(todo.value);
+            const li=document.createElement('li')//create an li
+            li.textContent=todo.value//adding user input to li
+            todolist.appendChild(li)
+        }
+        button.addEventListener('click',addtodo)
+        // function addToDoList(e){
+            // const todolist = document.createElement('li');
+
+              -->
+    </form>
+
+    <hr/>
+    <h1>order_app</h1>
+    <div id="order"></div>
+    <form>
+        <!-- Order Form -->
+        <!-- Required Input: 4 Separate Number Fields & Button-->
+        <!-- Bonus: Show the TOTAL SUM of items ordered -->
+
+        <label for="cookie">Quantity cookie</label>
+        <input type='number'id='cookie'name ='cookie'/> 
+        <label for="ice-cream">Quantity ice-cream</label>
+        <input type='number'id='ice-cream'name='ice-cream'/> 
+        <label for="sandwich">Quantity sandwich</label>
+        <input type='number'id='sandwich'name='sandwich'/>
+        <label for="potato">Quantity potato</label>
+        <input type='number'id='potato'name='potato'/>
+        <button type='submit'id='quantity'>total</button>
+
+        
+    </form>
+    <script>
+        let cookie=document.getElementById('cookie')
+        let icecream=document.getElementById('ice-cream')
+        let sandwich=document.getElementById('sandwich')
+        let potato=document.getElementById('potato')
+
+        let orderbutton=document.getElementById('quantity')
+        orderbutton.addEventListener('click',grocerylist)
+        function grocerylist(e){
+            e.preventDefault()// preventing page from reloading
+         let total=Number(cookie.value)+Number(icecream.value)+Number(sandwich.value)+Number(potato.value)//convert value to integer
+         console.log(total);
+       let orderdiv= document.getElementById('order')
+       let li = document.createElement('li')
+       li.textContent=total
+       orderdiv.appendChild(li)
+      
+        }
+       
+    </script>
+
+    <hr/>
+    <h1>form_app</h1>
+    <div id="form"></div>
+    <form>
+        <!-- Required Input: Two Text Fields -->
+        <!-- Add post to forum -->
+        <!-- BONUS! Add toggle button to 'post' to count number of likes-->
+
+        <label for="username">Username</label>
+            <input type'username' id='name'name='user'/>
+        <label for="message">Message</label>
+            <input type'message" id='comment''message'/>
+            <button type='toggle'id='likes'>total</button>
+
+    <script>
+        let username=document.getElementById('name')
+        let message=document.getElementById('comment')
+
+        function form(e){
+            e.preventDefault()
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+       
+  
+</body>
+</html>
